@@ -7,6 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9621439B18D8A42700239CB7 /* Quickblox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9621439A18D8A42700239CB7 /* Quickblox.framework */; };
+		9621439D18D8A49800239CB7 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9621439C18D8A49700239CB7 /* CFNetwork.framework */; };
+		9621439F18D8A4A300239CB7 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9621439E18D8A4A300239CB7 /* SystemConfiguration.framework */; };
+		962143A118D8A4AE00239CB7 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 962143A018D8A4AE00239CB7 /* MobileCoreServices.framework */; };
+		962143A318D8A4C400239CB7 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 962143A218D8A4C400239CB7 /* CoreLocation.framework */; };
+		962143A518D8A4E700239CB7 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 962143A418D8A4E700239CB7 /* CoreData.framework */; };
+		962143A718D8A4F100239CB7 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 962143A618D8A4F100239CB7 /* AudioToolbox.framework */; };
+		962143A918D8A4FB00239CB7 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 962143A818D8A4FB00239CB7 /* CoreMedia.framework */; };
+		962143AB18D8A50600239CB7 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 962143AA18D8A50600239CB7 /* Accelerate.framework */; };
+		962143AD18D8A50F00239CB7 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 962143AC18D8A50F00239CB7 /* CoreVideo.framework */; };
+		962143AF18D8A51700239CB7 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 962143AE18D8A51700239CB7 /* AVFoundation.framework */; };
+		962143B118D8A52000239CB7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 962143B018D8A52000239CB7 /* Security.framework */; };
+		962143B318D8A53100239CB7 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 962143B218D8A53100239CB7 /* libz.dylib */; };
+		962143B518D8A56800239CB7 /* libresolv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 962143B418D8A56800239CB7 /* libresolv.dylib */; };
+		962143B718D8A57B00239CB7 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 962143B618D8A57B00239CB7 /* libxml2.dylib */; };
+		962143C018D8B79C00239CB7 /* XMLReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 962143BF18D8B79C00239CB7 /* XMLReader.m */; };
+		962143C318D8C12700239CB7 /* MessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 962143C218D8C12700239CB7 /* MessageCell.m */; };
 		962F35F918D89ABB0011D6C2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 962F35F818D89ABB0011D6C2 /* Foundation.framework */; };
 		962F35FB18D89ABB0011D6C2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 962F35FA18D89ABB0011D6C2 /* CoreGraphics.framework */; };
 		962F35FD18D89ABB0011D6C2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 962F35FC18D89ABB0011D6C2 /* UIKit.framework */; };
@@ -34,6 +51,25 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9621439A18D8A42700239CB7 /* Quickblox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Quickblox.framework; sourceTree = "<group>"; };
+		9621439C18D8A49700239CB7 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		9621439E18D8A4A300239CB7 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		962143A018D8A4AE00239CB7 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		962143A218D8A4C400239CB7 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		962143A418D8A4E700239CB7 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		962143A618D8A4F100239CB7 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		962143A818D8A4FB00239CB7 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		962143AA18D8A50600239CB7 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		962143AC18D8A50F00239CB7 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		962143AE18D8A51700239CB7 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		962143B018D8A52000239CB7 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		962143B218D8A53100239CB7 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		962143B418D8A56800239CB7 /* libresolv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libresolv.dylib; path = usr/lib/libresolv.dylib; sourceTree = SDKROOT; };
+		962143B618D8A57B00239CB7 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		962143BE18D8B79C00239CB7 /* XMLReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLReader.h; sourceTree = "<group>"; };
+		962143BF18D8B79C00239CB7 /* XMLReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLReader.m; sourceTree = "<group>"; };
+		962143C118D8C12700239CB7 /* MessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageCell.h; sourceTree = "<group>"; };
+		962143C218D8C12700239CB7 /* MessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageCell.m; sourceTree = "<group>"; };
 		962F35F518D89ABB0011D6C2 /* Jesture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jesture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		962F35F818D89ABB0011D6C2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		962F35FA18D89ABB0011D6C2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -60,7 +96,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				962143B718D8A57B00239CB7 /* libxml2.dylib in Frameworks */,
+				962143B518D8A56800239CB7 /* libresolv.dylib in Frameworks */,
+				962143B318D8A53100239CB7 /* libz.dylib in Frameworks */,
+				962143B118D8A52000239CB7 /* Security.framework in Frameworks */,
+				962143AF18D8A51700239CB7 /* AVFoundation.framework in Frameworks */,
+				962143AD18D8A50F00239CB7 /* CoreVideo.framework in Frameworks */,
+				962143AB18D8A50600239CB7 /* Accelerate.framework in Frameworks */,
+				962143A918D8A4FB00239CB7 /* CoreMedia.framework in Frameworks */,
+				962143A718D8A4F100239CB7 /* AudioToolbox.framework in Frameworks */,
+				962143A518D8A4E700239CB7 /* CoreData.framework in Frameworks */,
+				962143A318D8A4C400239CB7 /* CoreLocation.framework in Frameworks */,
 				962F35FB18D89ABB0011D6C2 /* CoreGraphics.framework in Frameworks */,
+				962143A118D8A4AE00239CB7 /* MobileCoreServices.framework in Frameworks */,
+				9621439F18D8A4A300239CB7 /* SystemConfiguration.framework in Frameworks */,
+				9621439D18D8A49800239CB7 /* CFNetwork.framework in Frameworks */,
+				9621439B18D8A42700239CB7 /* Quickblox.framework in Frameworks */,
 				962F35FD18D89ABB0011D6C2 /* UIKit.framework in Frameworks */,
 				962F35F918D89ABB0011D6C2 /* Foundation.framework in Frameworks */,
 			);
@@ -79,6 +130,58 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		962143B818D8A78A00239CB7 /* helpers */ = {
+			isa = PBXGroup;
+			children = (
+				962F360718D89ABB0011D6C2 /* AppDelegate.h */,
+				962F360818D89ABB0011D6C2 /* AppDelegate.m */,
+			);
+			name = helpers;
+			sourceTree = "<group>";
+		};
+		962143B918D8A78F00239CB7 /* models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = models;
+			sourceTree = "<group>";
+		};
+		962143BA18D8A79400239CB7 /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				962F360D18D89ABB0011D6C2 /* ViewController.h */,
+				962F360E18D89ABB0011D6C2 /* ViewController.m */,
+			);
+			name = controllers;
+			sourceTree = "<group>";
+		};
+		962143BB18D8A79900239CB7 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				962143C118D8C12700239CB7 /* MessageCell.h */,
+				962143C218D8C12700239CB7 /* MessageCell.m */,
+				962F360A18D89ABB0011D6C2 /* Main.storyboard */,
+			);
+			name = views;
+			sourceTree = "<group>";
+		};
+		962143BC18D8B78700239CB7 /* external */ = {
+			isa = PBXGroup;
+			children = (
+				962143BD18D8B79200239CB7 /* XMLReader */,
+			);
+			name = external;
+			sourceTree = "<group>";
+		};
+		962143BD18D8B79200239CB7 /* XMLReader */ = {
+			isa = PBXGroup;
+			children = (
+				962143BE18D8B79C00239CB7 /* XMLReader.h */,
+				962143BF18D8B79C00239CB7 /* XMLReader.m */,
+			);
+			name = XMLReader;
+			sourceTree = "<group>";
+		};
 		962F35EC18D89ABB0011D6C2 = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +204,21 @@
 		962F35F718D89ABB0011D6C2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				962143B618D8A57B00239CB7 /* libxml2.dylib */,
+				962143B418D8A56800239CB7 /* libresolv.dylib */,
+				962143B218D8A53100239CB7 /* libz.dylib */,
+				962143B018D8A52000239CB7 /* Security.framework */,
+				962143AE18D8A51700239CB7 /* AVFoundation.framework */,
+				962143AC18D8A50F00239CB7 /* CoreVideo.framework */,
+				962143AA18D8A50600239CB7 /* Accelerate.framework */,
+				962143A818D8A4FB00239CB7 /* CoreMedia.framework */,
+				962143A618D8A4F100239CB7 /* AudioToolbox.framework */,
+				962143A418D8A4E700239CB7 /* CoreData.framework */,
+				962143A218D8A4C400239CB7 /* CoreLocation.framework */,
+				962143A018D8A4AE00239CB7 /* MobileCoreServices.framework */,
+				9621439E18D8A4A300239CB7 /* SystemConfiguration.framework */,
+				9621439C18D8A49700239CB7 /* CFNetwork.framework */,
+				9621439A18D8A42700239CB7 /* Quickblox.framework */,
 				962F35F818D89ABB0011D6C2 /* Foundation.framework */,
 				962F35FA18D89ABB0011D6C2 /* CoreGraphics.framework */,
 				962F35FC18D89ABB0011D6C2 /* UIKit.framework */,
@@ -112,12 +230,11 @@
 		962F35FE18D89ABB0011D6C2 /* Jesture */ = {
 			isa = PBXGroup;
 			children = (
-				962F360718D89ABB0011D6C2 /* AppDelegate.h */,
-				962F360818D89ABB0011D6C2 /* AppDelegate.m */,
-				962F360A18D89ABB0011D6C2 /* Main.storyboard */,
-				962F360D18D89ABB0011D6C2 /* ViewController.h */,
-				962F360E18D89ABB0011D6C2 /* ViewController.m */,
-				962F361018D89ABB0011D6C2 /* Images.xcassets */,
+				962143BC18D8B78700239CB7 /* external */,
+				962143B818D8A78A00239CB7 /* helpers */,
+				962143BA18D8A79400239CB7 /* controllers */,
+				962143BB18D8A79900239CB7 /* views */,
+				962143B918D8A78F00239CB7 /* models */,
 				962F35FF18D89ABB0011D6C2 /* Supporting Files */,
 			);
 			path = Jesture;
@@ -126,6 +243,7 @@
 		962F35FF18D89ABB0011D6C2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				962F361018D89ABB0011D6C2 /* Images.xcassets */,
 				962F360018D89ABB0011D6C2 /* Jesture-Info.plist */,
 				962F360118D89ABB0011D6C2 /* InfoPlist.strings */,
 				962F360418D89ABB0011D6C2 /* main.m */,
@@ -249,8 +367,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				962143C318D8C12700239CB7 /* MessageCell.m in Sources */,
 				962F360F18D89ABB0011D6C2 /* ViewController.m in Sources */,
 				962F360918D89ABB0011D6C2 /* AppDelegate.m in Sources */,
+				962143C018D8B79C00239CB7 /* XMLReader.m in Sources */,
 				962F360518D89ABB0011D6C2 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -376,9 +496,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Jesture/Jesture-Prefix.pch";
 				INFOPLIST_FILE = "Jesture/Jesture-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = (
+					"-lstdc++",
+					"-ObjC",
+					"-lxml2",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -389,9 +519,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Jesture/Jesture-Prefix.pch";
 				INFOPLIST_FILE = "Jesture/Jesture-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = (
+					"-lstdc++",
+					"-ObjC",
+					"-lxml2",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -456,6 +596,7 @@
 				962F362918D89ABC0011D6C2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		962F362A18D89ABC0011D6C2 /* Build configuration list for PBXNativeTarget "JestureTests" */ = {
 			isa = XCConfigurationList;
@@ -464,6 +605,7 @@
 				962F362C18D89ABC0011D6C2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Quickblox/Quickblox.h>
 
 @interface ViewController : UIViewController
+
+@property (strong, nonatomic) QBUUser *currentUser;
+@property (strong, nonatomic) NSString *currentToken;
 
 @end

@@ -12,10 +12,15 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    NSLog(@"Launched Jesture");
+    
+    [QBSettings setApplicationID:8366];
+    [QBSettings setAuthorizationKey:QUICKBLOX_AUTH_KEY];
+    [QBSettings setAuthorizationSecret:QUICKBLOX_AUTH_SECRET];
+    
     return YES;
 }
-							
+
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
