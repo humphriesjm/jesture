@@ -13,5 +13,6 @@
 
 @property (strong, nonatomic) QBUUser *currentUser;
 @property (strong, nonatomic) NSString *currentToken;
+@property (strong, nonatomic) NSString *currentUsername;
 
 @end

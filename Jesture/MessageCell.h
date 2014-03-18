@@ -8,7 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MessageCell : UITableViewCell
+@interface MessageCell : UITableViewCell <UITextFieldDelegate>
+
 @property (weak, nonatomic) IBOutlet UILabel *cellLabel;
+@property (weak, nonatomic) IBOutlet UILabel *currentUsernameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *timeLabel;
+@property (strong, nonatomic) IBOutlet UITextField *responseField;
+@property (weak, nonatomic) IBOutlet UIView *blueView;
+
+- (void)showResponseField;
 
 @end

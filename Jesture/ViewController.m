@@ -10,12 +10,14 @@
 //#import "XMLReader.h"
 #import "MessageCell.h"
 
-@interface ViewController () <QBActionStatusDelegate, QBChatDelegate, UITextFieldDelegate>
+@interface ViewController () <QBActionStatusDelegate, QBChatDelegate, UITextFieldDelegate, UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *messageTextField;
 @property (weak, nonatomic) IBOutlet UIButton *messageSendButton;
 @property (weak, nonatomic) IBOutlet UITableView *messagesTable;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *userSegmentedControl;
+@property (weak, nonatomic) IBOutlet UILabel *timeLabel;
 @property (strong, nonatomic) NSMutableArray *allMessagesArray;
+@property (weak, nonatomic) IBOutlet UILabel *currentUsernameLabel;
 @end
 
 @implementation ViewController
@@ -49,8 +51,10 @@
     QBASessionCreationRequest *extendedAuthRequest = [QBASessionCreationRequest request];
     if (self.userSegmentedControl.selectedSegmentIndex == 0) {
         extendedAuthRequest.userLogin = JASON_USERNAME;
+        self.currentUsername = JASON_USERNAME;
     } else {
         extendedAuthRequest.userLogin = FITCH_USERNAME;
+        self.currentUsername = FITCH_USERNAME;
     }
     extendedAuthRequest.userPassword = @"jesture2014";
     
@@ -63,14 +67,14 @@
 - (void)completedWithResult:(Result *)result
 {
     // Create session result
-    if(result.success && [result isKindOfClass:QBAAuthSessionCreationResult.class]){
+    if (result.success && [result isKindOfClass:QBAAuthSessionCreationResult.class]) {
         // You have successfully created the session
         QBAAuthSessionCreationResult *res = (QBAAuthSessionCreationResult *)result;
         
         // Sign In to QuickBlox Chat
         self.currentUser = [QBUUser user];
-        self.currentUser.ID = res.session.userID; // your current user's ID
-        self.currentUser.password = @"jesture2014"; // your current user's password
+        self.currentUser.ID = res.session.userID;
+        self.currentUser.password = @"jesture2014";
         self.currentToken = res.session.token;
         
         // set Chat delegate
@@ -104,17 +108,20 @@
     NSUInteger fitchID = 947052;
     NSUInteger jasonID = 947231;
     if (self.userSegmentedControl.selectedSegmentIndex == 0) {
+        message.senderNick = JASON_USERNAME;
         message.recipientID = fitchID;
     } else {
+        message.senderNick = FITCH_USERNAME;
         message.recipientID = jasonID;
     }
     message.text = msg;
     
     [[QBChat instance] sendMessage:message];
     
-    NSString *formattedString = [NSString stringWithFormat:@"%u: %@", message.senderID, message.text];
-    [self.allMessagesArray addObject:formattedString];
+    [self.allMessagesArray addObject:message];
     [self.messagesTable reloadData];
+    self.messageTextField.text = @"";
+    [self.messageTextField resignFirstResponder];
 }
 
 #pragma mark -
@@ -154,9 +161,8 @@
     }
     NSLog(@"New message(chatDidReceiveMessage): %@", message);
     NSLog(@"allMessagesArray:%@", self.allMessagesArray);
-    NSString *formattedString = [NSString stringWithFormat:@"%ul: %@", message.senderID, message.text];
-    [self.allMessagesArray addObject:formattedString];
-    NSLog(@"added %@ to allmessagesarray", formattedString);
+    [self.allMessagesArray addObject:message];
+    NSLog(@"added %@ to allmessagesarray", message);
     [self.messagesTable reloadData];
 }
 
@@ -165,7 +171,7 @@
 #pragma mark <UITableViewDataSource>
 
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath: (NSIndexPath *) indexPath {
-    return 54.0;
+    return 75.0;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -176,14 +182,35 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     MessageCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
-    NSString *thisMessage = self.allMessagesArray[indexPath.row];
-    cell.cellLabel.text = thisMessage;
+    NSArray *reversedArray = [[self.allMessagesArray reverseObjectEnumerator] allObjects];
+    QBChatMessage *thisMessage = reversedArray[indexPath.row];
+    cell.cellLabel.text = thisMessage.text;
+    NSUInteger fitchID = 947052;
+    NSUInteger jasonID = 947231;
+    if (thisMessage.senderID == jasonID) {
+        cell.currentUsernameLabel.text = JASON_USERNAME;
+    } else if (thisMessage.senderID == fitchID) {
+        cell.currentUsernameLabel.text = FITCH_USERNAME;
+    } else {
+        cell.currentUsernameLabel.text = @"idk";
+    }
+    cell.timeLabel.text = [thisMessage.datetime descriptionWithLocale:@"en_US"];
+    [cell.blueView setFrame:CGRectMake(-320, 0, 320, 75)];
     return cell;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
+    
+    MessageCell *selectedCell = (MessageCell*)[tableView cellForRowAtIndexPath:indexPath];
+    
+    [UIView animateWithDuration:1.0
+                     animations:^{
+                         [selectedCell.blueView setFrame:CGRectMake(0, 0, 320, 75)];
+                     } completion:^(BOOL finished) {
+                         [selectedCell showResponseField];
+                     }];
 }
 
 
